@@ -17,7 +17,6 @@ namespace QFramework.Example
     using UnityEngine;
     using UnityEngine.UI;
     
-    
     public class UIHomePanelData : QFramework.UIPanelData
     {
     }
