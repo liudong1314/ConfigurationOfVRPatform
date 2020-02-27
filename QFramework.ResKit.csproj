@@ -396,6 +396,15 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>E:/Git/ConfigurationOfVRPatform/Assets/Plugins/Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>E:/Git/ConfigurationOfVRPatform/Assets/QFramework/Extensions/DotweenExtensions/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>E:/Git/ConfigurationOfVRPatform/Assets/QFramework/Extensions/DotweenExtensions/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="ProtobufNet">
+      <HintPath>E:/Git/ConfigurationOfVRPatform/Assets/QFramework/Extensions/Plugins/ProtobufNet.dll</HintPath>
+    </Reference>
     <Reference Include="QFramework.Log">
       <HintPath>E:/Git/ConfigurationOfVRPatform/Assets/QFramework/Framework/1.Core/Log/QFramework.Log.dll</HintPath>
     </Reference>

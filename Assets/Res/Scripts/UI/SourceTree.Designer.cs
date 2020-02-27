@@ -18,11 +18,32 @@ namespace QFramework.ChivaConfigurationVRPatform
     using UnityEngine.UI;
     
     
-    // Generate Id:b35f203a-546c-4977-9dca-2af29e6c6a18
+    // Generate Id:db059507-3803-44ab-9659-2c6c7ad847c2
     public partial class SourceTree
     {
         
         public const string NAME = "SourceTree";
+        
+        [SerializeField()]
+        public TreeNode TreeNode;
+        
+        [SerializeField()]
+        public UnityEngine.RectTransform Content;
+        
+        [SerializeField()]
+        public UnityEngine.UI.Button AddMainNodeBtn;
+        
+        [SerializeField()]
+        public UnityEngine.UI.InputField searchInputField;
+        
+        [SerializeField()]
+        public UnityEngine.UI.Toggle searchBtn;
+        
+        [SerializeField()]
+        public UnityEngine.UI.Button FinishBtn;
+        
+        [SerializeField()]
+        public UnityEngine.UI.Button CancleBtn;
         
         private SourceTreeData mPrivateData = null;
         
@@ -41,6 +62,13 @@ namespace QFramework.ChivaConfigurationVRPatform
         
         protected override void ClearUIComponents()
         {
+            TreeNode = null;
+            Content = null;
+            AddMainNodeBtn = null;
+            searchInputField = null;
+            searchBtn = null;
+            FinishBtn = null;
+            CancleBtn = null;
             mData = null;
         }
     }

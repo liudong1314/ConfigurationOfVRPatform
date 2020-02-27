@@ -20,6 +20,8 @@ namespace QFramework.ChivaConfigurationVRPatform
     
     public class SourceTreeData : QFramework.UIPanelData
     {
+        public List<TreeNode> treeNodes = new List<TreeNode>();
+
     }
     
     public partial class SourceTree : QFramework.UIPanel
@@ -33,9 +35,22 @@ namespace QFramework.ChivaConfigurationVRPatform
         protected override void OnInit(QFramework.IUIData uiData)
         {
             mData = uiData as SourceTreeData ?? new SourceTreeData();
-            // please add init code here
+            
+            AddMainNodeBtn.onClick.AddListener(AddMianNodeBtnClick);
+
+            FinishBtn.onClick.AddListener(()=> 
+            {
+
+                for (int i = 0; i < mData.treeNodes.Count; i++)
+                {
+                    Debug.LogError(mData.treeNodes[i] == null);
+                }
+
+
+            });
+
         }
-        
+
         protected override void OnOpen(QFramework.IUIData uiData)
         {
         }
@@ -50,6 +65,31 @@ namespace QFramework.ChivaConfigurationVRPatform
         
         protected override void OnClose()
         {
+        }
+
+        /// <summary>
+        /// 添加Node
+        /// </summary>
+        protected void AddMianNodeBtnClick()
+        {
+            //克隆子节点
+            GameObject tempNodeObj = Instantiate(TreeNode.gameObject,Content);
+            TreeNode tempNode = tempNodeObj.GetComponent<TreeNode>();
+
+            tempNode.treeNodeItem.cloneConent = Content;
+            tempNode.treeNodeItem.prefab = TreeNode.gameObject;
+            tempNode.treeNodeItem.layer.Value = 0;
+            mData.treeNodes.Add(tempNode);
+
+            tempNodeObj.SetActive(true);
+
+        }
+
+        protected void GenerateNodeTree()
+        {
+
+
+
         }
     }
 }
